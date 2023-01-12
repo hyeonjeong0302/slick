@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    /* list-style: none; 
+    슬릭의 점이 사라져. */    
+
+}
+.wrap {
+    width: 800px;
+    margin: 100px auto 0;
+}
+
+.wrap .main {}
+
+.wrap .main .your-class{
+    height: 420px;
+}
+
+.wrap .main .your-class .slick-slide {
+    height: 420px;
+}
+
+.wrap .main .your-class .slick-slide video {
+    width: 100%;
+}
+
+/* video는 비율을 유지하면서 크기가 조정돼. 어디 잘리고 안그래. 백그라운드 이미지에 video 넣어도 돌아가지 않아. 움짤은 들어가.  시도조차하지말어. */
+
+.wrap .main .your-class  .slick-arrow{
+    position: absolute;
+    top: calc(50% - 10px);
+    /* 버튼 크기가 20px정도 되니까 -10px 하면 된당.  */
+    font-size: 0;
+    /* 폰트 기본값으 16px 
+    크롬에서는 최소 폰트크기가 10px이기 때문에 8px은 적용이 안 됨. 아싸리 0으로 해라! */
+    visibility: hidden;
+    /* visibility: hidden; 
+    prev, next 포함 이 안에 있는 아이콘도 안보이고 크기가 0이 되는 것이야. 아래로 내려가서 애프터에 크기 등 지정해주자. */
+
+}
+.wrap .main .your-class .slick-prev{
+    z-index: 5;
+    /* z-index: 5; 는 포지션이 없으면 실행이 안되는데 상위(.wrap .main .your-class  .slick-arrow)에 position: absolute;가 설정되어 있어서 오키. */
+    left: 5%;
+}
+
+.wrap .main .your-class .slick-prev::after{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 30px;
+    color: rgb(255, 240, 246);
+}
+
+.wrap .main .your-class .slick-next{
+    right: 5%;
+
+}
+
+.wrap .main .your-class .slick-next::after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 30px;
+    color: rgb(255, 240, 246);
+}
+/* .slick-arrow 안에   .slick-prev, .slick-next가 있으니까 그냥 .slick-arrow 생략해도 됨. */
+
+.wrap .main .your-class .slick-dots{}
+.wrap .main .your-class .slick-dots li{
+    display: inline-block;
+    margin: 20px 5px 0;
+    /* 위로는 20px 양옆으로는 5px 아래로는 0 */
+}
+/* 슬릭의 1, 2, 3을 인라인으로 만들어 가로로 배열시키는 것. 그러나 block요소로 보는거야. 그냥 inline으로 하면 margin-top가 적용되지 않지만 block으로 보기 때문에 margin-top이 적용되는 것이다. */
+.wrap .main .your-class .slick-dots li button{
+   border: none;
+   font-size: 0;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background-color: #999;
+   transition: 0.3s;
+}
+
+
+.wrap .main .your-class .slick-dots li.slick-active button{
+    background-color: rgb(236, 85, 85);
+    width: 20px;
+    border-radius: 8px;
+}
+/* 얘는 버튼을 누르면 그 버튼 모양이 바뀌어.  */

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/> 는 slick cdn쳐서 나온거다. slick.min.css를 선택한 이유는 css 연결이고min은 압축, min 아니 ㄴ것도 갠차나. 
+    <link rel="stylesheet" href="style.css">
+    얘를 얘보다 앞에 넣는 것이 중요해. 밑에거가 더 힘이 세어야해서 이렇게 넣어야 해. -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+        위치 상관 없고, 버튼의 글씨 없애고 폰트어썸 연결하는거야. 
+     -->
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="your-class">
+                <div class="s1">
+                    <video controls autoplay muted
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86481/86481_210223_1200_128_960_540.mp4"></video>
+                    <!--                     <video src="http://h.vod.cgv.co.kr:80/vodCGVa/86481/86481_210223_1200_128_960_540.mp4"></video>
+                    요로케만 하면 비디오가 돌아가지 않아. 실행시키려면  autoplay muted를 추가해. 
+                    음소거를 안 하면 갑자기 팍 소리가 나는 문제가 생기니까 정책적으로 요렇게 설정해 놓은거얌. 
+                controls 추가하면 컨트롤창 생김. -->
+                </div>
+                <div class="s2">
+                    <video controls autoplay muted
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86481/86481_208975_1200_128_960_540.mp4"></video>
+                </div>
+                <div class="s3">
+                    <video controls autoplay muted
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86481/86481_208974_1200_128_960_540.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.your-class').slick({
+                autoplay: true,
+                dots: true,
+                fade: true,
+                fade: true,
+                // fade 하면 슬릭이 옆으로 넘어가는 것이 아니라 fade된다. 
+            });
+        });
+    </script>
+    <!--     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>얘는 code 제이쿼리 검색해서 나온거고
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>얘는 slick cdn에 있는건데 반드시  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>밑에 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>를 넣어야 힘을 받아 -->
+    <!-- $(document).ready(function(){
+  $('.your-class').slick({
+    //setting-name: setting-value
+  });
+});
+는 반드시 새로 script 태그를 만들어서 그 사이에 넣어. 
+<script>
+        $(document).ready(function(){
+  $('.your-class').slick({
+    
+  });
+});
+    </script>
+    이렇게!!ㅎㅎ
+    위에 있는 
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    사이에 넣으면 안돼. 
+
+    setting-name: setting-value얘가 자꾸 오류를 내서 칸을 남겨두고 지워버림. 
+-->
+<!-- 비디오를 폴더에 넣고 돌리면 너무 무거워서 요즘엔 선호하지 않아. 
+요즘엔 영상을 유튜브에 올려서 요래오래 해. 용량이 너무 크지 않고 짧은 것들은 폴더에 넣기도 하지만 용량이 크면 로딩 시간이 길어져.  -->
+</body>
+</html>
